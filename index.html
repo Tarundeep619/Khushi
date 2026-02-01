@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Love Calculator 💘</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff9a9e, #fecfef);
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        width: 300px;
+    }
+
+    input {
+        padding: 10px;
+        width: 90%;
+        margin: 10px 0;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        background-color: #ff4b7d;
+        color: white;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Love Calculator 💖</h2>
+    <input type="text" id="yourName" placeholder="Your Name">
+    <input type="text" value="KHUSHI JOSHI" disabled>
+    <button onclick="calculateLove()">Calculate 💘</button>
+    <h3 id="result"></h3>
+</div>
+
+<script>
+function calculateLove() {
+    const yourName = document.getElementById("yourName").value;
+    if (yourName === "") {
+        alert("Enter your name first 😌");
+        return;
+    }
+
+    let percentage = Math.floor(Math.random() * 31) + 70; // 70-100%
+    document.getElementById("result").innerHTML =
+        yourName + " ❤️ KHUSHI JOSHI = " + percentage + "% Compatibility 😍";
+}
+</script>
+
+</body>
+</html>
